@@ -1,0 +1,36 @@
+@import '../variables';
+@import '../mixins';
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+    margin-right: -40px;
+    border: 2px solid var(--color-light-gray);
+    border-radius: 25px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    outline: none;
+    display: none;
+}
+
+.search-icon {
+    margin: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.show-on-mobile {
+    display: block !important;
+}

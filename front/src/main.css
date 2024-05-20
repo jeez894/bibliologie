@@ -1,0 +1,1636 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import '../node_modules/react-toastify/dist/ReactToastify.css';
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header, nav, footer, section, article {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--element-color);
+  }
+  50% {
+    background-color: var(--text-color);
+  }
+  100% {
+    background-color: var(--element-color);
+  }
+}
+/* Styles pour la scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--color-none);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--color-shadow);
+  background-color: var(--module-color-2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, var(--element-color)), color-stop(0.5, var(--color-none)), color-stop(0.86, var(--element-color)));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color); /* Couleur du curseur au survol */
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  margin-right: -40px;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 25px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  outline: none;
+  display: none;
+}
+
+.search-icon {
+  margin: 10px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.show-on-mobile {
+  display: block !important;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-none);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+header nav {
+  width: 100%;
+}
+header .header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+header .header-top .logo-container {
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1060;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  transition: var(--transition-slow) cubic-bezier(0.47, 0.03, 0.49, 1.38);
+}
+header .header-top .logo-container .logo {
+  width: 100%;
+  height: auto;
+}
+header .header-top h1 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: var(--font-size-x-large);
+  line-height: 1;
+  color: var(--element-color);
+  margin: 0;
+  text-align: center;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+header .header-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+header .header-bottom .burger-menu-icon, header .header-bottom .cart-icon-container, header .header-bottom .book-search, header .header-bottom button {
+  margin: 0 10px;
+  transition: var(--transition-very-slow) ease, opacity 0.5s ease;
+}
+header.scrolled .header-top .logo-container {
+  transform: rotate(360deg);
+}
+header.scrolled .header-bottom, header.scrolled h1 {
+  transform: translateY(-500%);
+  opacity: 0;
+  transition-delay: 0s, 1s;
+  visibility: hidden 1s;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    flex-grow: 1;
+  }
+  header .header-top .logo-container {
+    margin-right: 10px;
+  }
+  header .header-top h1 {
+    font-size: var(--font-size-x-x-large);
+    text-align: left;
+  }
+  header .header-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 0;
+  }
+  header.scrolled .header-bottom, header.scrolled h1 {
+    transform: translateX(-110%);
+    opacity: 0;
+    visibility: hidden 0.5s;
+    overflow: hidden;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  header.scrolled .header-top .logo-container {
+    transform: rotate(360deg);
+  }
+}
+
+.menu-active {
+  display: block;
+}
+.menu-active .overlay {
+  display: block;
+}
+.menu-active .sidebar-menu {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-shadow);
+  z-index: 1050;
+  display: none;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--module-color-2);
+  box-shadow: 2px 0 8px var(--color-shadow);
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1055;
+  transition: left 0.3s ease-in-out;
+}
+.sidebar-menu a {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+.sidebar-menu a:hover {
+  background-color: var(--button-background-hover);
+}
+
+.burger-menu-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.header-modal {
+  position: absolute;
+  right: 10px;
+  top: 100%;
+  width: 300px;
+  background-color: var(--module-color);
+  box-shadow: 0 8px 16px var(--color-shadow);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.header-modal ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.header-modal li {
+  padding: 10px;
+  border-bottom: 1px solid var(--text-color);
+}
+.header-modal a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: var(--element-color);
+  text-decoration: none;
+}
+.header-modal a :hover {
+  background-color: var(--text-color);
+}
+
+.cart-preview-modal li:last-child {
+  border-bottom: none;
+}
+
+.burger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-shadow);
+  z-index: 50;
+}
+
+.burger-modal {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  width: 200px;
+  background-color: var(--module-color);
+  z-index: 100;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5px;
+}
+.burger-modal .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+}
+.burger-modal .menu a {
+  margin: 10px;
+}
+
+.burger-close-button {
+  float: right;
+  padding: 5px 10px;
+}
+
+@media (min-width: 992px) {
+  /****** DESKTOP STYLES *******/
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+footer {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.footer-content h3 {
+  margin: 0 0 10px;
+}
+
+.footer-content p {
+  margin: 0 0 20px;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-bottom p {
+  margin: 0 0 10px;
+}
+
+@media (min-width: 768px) {
+  /****** TABLET STYLES *******/
+  body {
+    font-size: 16px;
+  }
+  .footer-content, .footer-bottom {
+    text-align: left;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .socials {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  /****** DESKTOP STYLES *******/
+  body {
+    font-size: 18px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+  .footer-content, .footer-bottom {
+    flex: 1;
+  }
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .socials {
+    margin: 0;
+  }
+  .footer-bottom p {
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 200px;
+  padding: 10px 10px 10px 10px;
+  margin-right: -40px;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 25px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  outline: none;
+  display: none;
+}
+
+.search-icon {
+  margin: 10px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.show-on-mobile {
+  display: block !important;
+}
+
+.Toastify__toast--default {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.Toastify__toast--success {
+  background-color: var(--color-success);
+  color: var(--text-color);
+}
+
+.Toastify__toast--error {
+  background-color: var(--color-error);
+  color: var(--text-color);
+}
+
+.Toastify__toast-body {
+  font-family: var(--font);
+}
+
+.confirm-toast {
+  background-color: var(--red-color);
+  color: var(--text-color);
+  padding: var(--spacing-base);
+  border-radius: 5px;
+  text-align: center;
+}
+.confirm-toast button {
+  background-color: var(--element-color);
+  border: none;
+  padding: var(--spacing-small) var(--spacing-base);
+  margin: var(--spacing-small);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-base) ease-in-out;
+}
+.confirm-toast button:hover {
+  background-color: var(--button-background-hover);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.carousel-item, .carousel-preview {
+  flex: 0 0 auto;
+  transition: transform 0.5s ease;
+}
+.carousel-item img, .carousel-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-height: 50vh;
+  object-fit: contain;
+}
+
+.carousel-item {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.carousel-preview {
+  width: 15%;
+  opacity: 0.5;
+}
+.carousel-preview h3, .carousel-preview p, .carousel-preview figcaption {
+  display: none;
+}
+
+.carousel-preview:first-child {
+  left: 0;
+}
+
+.carousel-preview:last-child {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .carousel-preview h3, .carousel-preview p, .carousel-preview figcaption {
+    display: block;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th, table td {
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+table tr {
+  border: 1px solid var(--text-color);
+}
+table td {
+  border: none;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+table td:before {
+  content: attr(data-label) ": ";
+  font-weight: bold;
+}
+table a, table button {
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  transition: all 0.3s;
+  width: 100%;
+}
+table thead tr {
+  display: none;
+}
+table a {
+  background-color: var(--element-color);
+  color: var(--text-color);
+}
+table a:hover, table button:hover {
+  transform: scale(1.05);
+}
+table button {
+  background-color: var(--color-red);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+  table th, table td {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+  }
+  table td:before {
+    content: none;
+  }
+  table thead tr {
+    display: table-row;
+  }
+  table a, table button {
+    width: auto;
+  }
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/asset/OpenDyslexic-Bold.otf") format("opentype");
+}
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+  --font: "Roboto", sans-serif;
+  --font-title: "Yellowtail", cursive;
+  --font-dyslexic: "Lexend Zetta", sans-serif;
+  --font-super-dyslexic: "OpenDyslexic", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+}
+
+[data-theme=Light] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic=true] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic=super] {
+  --font: var(--font-super-dyslexic);
+}
+
+.homepage-banner {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.homepage-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.homepage-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, var(--color-none) 40%, var(--background-color));
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 10px 10px 10px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.close {
+  color: var(--color-red);
+  background-color: var(--color-white);
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 0 10px;
+  transition: all 0.3s;
+}
+.close :hover {
+  transform: scale(1.05);
+}
+
+.search-result-item {
+  border-bottom: 1px solid var(--color-light-grey);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.search-result-item img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+.search-result-item h3, .search-result-item p, .search-result-item a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 80%;
+  max-height: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.product-details {
+  margin: 10px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: var(--module-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.cart-item-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.cart-item-info h3, .cart-item-info p {
+  margin: 5px 0;
+}
+
+.cart-item-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.cart-item-actions button {
+  margin-right: 10px;
+}
+
+.link-to-checkout {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: var(--color-white);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.link-to-checkout :hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--text-color);
+  margin: 20px 0;
+}
+
+.error-message {
+  color: var(--color-red);
+  margin-top: 10px;
+}
+
+button {
+  background-color: var(--element-color);
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  margin: 5px;
+  transition: all 0.3s;
+}
+button :hover {
+  transform: scale(1.05);
+}
+
+form {
+  margin-top: 20px;
+  margin-right: 30px;
+}
+form input, form textarea {
+  background-color: var(--module-color-2);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 10px;
+  width: calc(100% - 22px);
+  margin: 5px 0;
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: var(--element-color);
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+
+.checkout-form {
+  background-color: var(--module-color);
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.StripeElement {
+  background-color: var(--module-color-2);
+  border: 1px solid var(--color-light);
+  color: var(--text-color);
+  padding: 10px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  z-index: 1070;
+}
+
+.modal-content {
+  background-color: var(--module-color-2);
+  padding: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: auto;
+}
+.modal-form fieldset {
+  display: flex;
+}
+.modal-form #resume {
+  flex-grow: 1;
+}
+
+.form-column, .image-preview-column {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-column {
+  flex: 1;
+}
+
+.image-preview-column {
+  flex-basis: 200px;
+  align-items: center;
+}
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.library-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.library-item {
+  background-color: var(--element-color);
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 1px 3px var(--color-shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+}
+.library-item :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px var(--color-shadow);
+}
+.library-item :not(:last-child) {
+  margin-bottom: 20px;
+}
+.library-item h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-container input[type=password], .password-container input[type=text] {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px; /* Ajustez selon vos besoins */
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+select {
+  background-color: var(--module-color-2);
+  color: var(--text-color);
+  padding: 12px 16px;
+  border: 2px solid var(--color-light);
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  appearance: none;
+  cursor: pointer;
+}
+
+select::-webkit-inner-spin-button,
+select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-white);
+}
+
+.select-custom {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding-right: 30px;
+}
+
+.select-custom::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  /****** TABLET STYLES *******/
+  body {
+    font-size: 16px;
+  }
+  .modal-content {
+    border-radius: 15px;
+    width: 70%;
+    max-height: 90%;
+  }
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .search-input {
+    display: block;
+  }
+  .product-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .product-image {
+    max-height: 400px;
+    max-width: 50%;
+    margin-right: 20px;
+  }
+  .product-details {
+    max-width: 50%;
+  }
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cart-item-image {
+    max-width: 20%;
+    flex-basis: 20%;
+    margin-right: 10px;
+  }
+  .cart-item-info {
+    flex-basis: 50%;
+  }
+  .cart-item-actions {
+    flex-basis: 30%;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  /****** DESKTOP STYLES *******/
+  body {
+    font-size: 18px;
+  }
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+  .search-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .search-result-item {
+    border: none;
+    width: calc(30% - 10px);
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .search-result-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    margin-bottom: 0;
+    border-radius: 15px;
+  }
+  .search-result-item:hover img {
+    transform: scale(1.1);
+  }
+  .search-result-item:hover .search-result-item-info {
+    display: block;
+    opacity: 1;
+  }
+  .search-result-item .search-result-item-info {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--color-shadow);
+    color: var(--text-color);
+    margin: 0;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    border-radius: 15px;
+  }
+  .search-result-item .search-result-item-info dt {
+    font-weight: bold;
+    display: inline;
+  }
+  .search-result-item .search-result-item-info dd {
+    display: inline;
+    margin-left: 4px;
+  }
+  .search-result-item .search-result-item-info dd:after {
+    content: "";
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

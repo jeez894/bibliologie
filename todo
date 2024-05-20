@@ -1,0 +1,110 @@
+library
+    + ne pas recreer de ligne dans bibliotheque globale si loeuvre pour la class ID x existe deja (pour le moment ont peu ajouter la meme oeuvre 50 fois a une meme bibliotheque)
+    + limiter a 5 bibliotheque par utilisateur
+    + faire la mechanique de definition du status
+    + faire la visualisation de la bibliotheque en utilisant que le contenus de la table oeuvre (avec plus de details si on clique dessus) ouverture modal avec resumé, date de parution ? ect ?
+    + mechanique de modification de la bibliotheque, suppression doeuvre, mise a jour du status, changer une oeuvre de bibliotheque
+        + confirmation de supression
+
+    + supression,purge de bibliotheque
+    + verifier pourquoi on se delog a chaque F5 de page
+
+shop
+    + acces au shop
+    + trouver une clef API ou creer BDD
+    + acces reservé adultes
+    + page home du shop avec derniers articles ou suggestion aleatroies
+    - categories
+    + pages articles avec details
+    + panier (changement de quantitée marche pas)
+    + passage commande
+    + paiement avec stripe
+    + debug stripe et commande (+ prix passe pas dans stripe, a passer en centime et a rectifier dans bdd ensuite
+                                + supression du panier ensuite
+                                + ajout de faux frais de port
+                                - mail de confirmation ?)
+    + consultation des commandes par les utilisateurs
+    + page de gestion des administrateurs: + gestion membres (visualiser ou suprimer)
+                                           + faire sous forme d'un tableau et pouvoir modifier status ou adult (mais pas d'un autres admin ?) 
+                                           + gestion produits (ajouter, mettre a jour ou suprimer)
+                                           + gestion commandes (mettre a jour ou suprimer)
+    + stabiliser le bousin (a peu pres bon)
+    + token mis a jour a la connexion ? (probleme acces autentificator sans f5)
+    + verifier les envois de token dans les routes pour l'autentificator !
+front
+    + fait chier...
+
+debug
+    + bouton shop qui apparait pas apres le log
+    + curseur pas forcement actif sur les clicables
+    + clean le code: - reearanger les fonction dans des contexts si besoin (trop long, fait pour un)
+                     + renomer fichiers si besoin
+                     + bla bla bla
+                     + virer les local host en les remplacant par les fichier config
+                     + charger les font avec la font dyslexique
+
+new testament:
+    + debug le crash de la present (faute d'orthographe sur le statut utilisateur dans le token)
+    + lire le rapport et la liste papier et faire le todo next plus ultra pro2
+    + rectifier tableau couleur surlignage
+    + modifier modal de gestion des produits (hauteur max en % de lecran) et ajouter un bouton annuler (et up le z index)
+
+        front-end:
+            + Très peu de balises sémantiques sont utilisées mais attention la balise main est OBLIGATOIRE dans un projet web
+            + Présence de plusieurs h1 par page
+            + Les actifs sont ceux de base => l'icône VITE n'a pas été modifiée...
+            - Pas de vérification W3C
+            + utilisation d'unités absolues (mettre des em ?)
+            + Niveau d'accessibilité à revoir : aucun label reliés aux input
+            - couleurs difficiles...
+            + Aucun pré-processeur (sass)
+            + Utilisation de REACT avec fetch et axios (differencier les deux et en choisir un de facon justifier)
+            + renomer indox en index
+            + front end en type module pas comon js (savoir ce que ca veut dire)
+            + c'est quoi le HOC et ou ca va ? (j'en ai fait 1 youpi)
+            + creer une page contact (flemme)
+            + ajouter un retour de reussite ou d'echec a la creation ou modification de produit
+            + ajouter des toast de confirmation a d'autres endroits
+            + regarder le RequireAuth son utilitée et si il est bien utiliser partout ou necessaire
+            + inconsistance (legeres) dans les fonction de user API
+            + faire tourner le logo
+            + rabbatre le header et creer un side menu
+            + fermeture burger a selection
+            + repenser page home en entier
+            + page gestion des membres cassé (suite clef csrf ?)
+            + token csrf depuis le home pour creer bibliotheque
+            + display le statut des oeuvres dans la bibliotheque
+            + refaire presentation choix de bibliotheque (osef)
+            - carousel a 5 sur desktop ?
+        
+        back-end:
+            + Schéma présenté mais sans cardinalités.
+            + Formulaire d'inscription non fonctionnel (aucune restriction de mot de passe et pas de confirmation - pas de validation de données).
+            + Formulaire de connexion fonctionnel mais il manque des récupérations de données.
+            + Architecture VC (il manque le Model...)
+            + nommage sur React => PascalCase sur les composants et les fichiers des composants
+            + Pas de back office présenté
+            + ajouter des propriete au back office
+            + creer un super superviseur avec plus de droits, notament sur les admins
+            - Pas de GIT ou de fichier MD
+            + virer bcrypt js
+            + faire les truck CORS et savoir ce que c'est
+            + utiliser MySQL2 plutot que promise my SQL
+            + verifier la presence de await quand il y a des async
+            + virer basket slice qui sert probablement a rien
+            + instaler module prop types pour vite js
+            + placer un peu d'usage de prop types
+            + verifier les limitations de creation de comptes ou de modifictaion,       adresse mail deja utilisée, nom d'utilisateur pas raciste ou autre...
+            + verifier la JWT token (permet a un user de modif ses propres données lié a son id et a un admin de faire ces modif avec son statut)
+            
+        presentation:
+            - faire un pense bete avec les def simple des termes comme HOC, react, CORS, ect ect.
+            - lister ces termes.
+            - lister aussi des justification d'utilisation de technologies, comme promise my sql ou vite, ect ect.
+            - lister des choix.
+            - dans le powert point presenter le schema avec les cardinalitée 1:1 et ce genre de merde
+            - justifier l'usage de esm (ecma* script module(European Computer Manufacturers Association))
+            - rajouter dans les truck a faire plus tard comme la confirmation par mail des comptes et des commandes.
+
+
+requireauth = blocage des routes (adresses)

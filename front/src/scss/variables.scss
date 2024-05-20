@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap');
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/asset/OpenDyslexic-Bold.otf') format('opentype');
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-violet: #6f00ff;
+  --color-red: #ae2012;
+  --color-dark-grey: #282c2f;
+  --color-brown-grey: #444;
+  --color-light-gray: #ddd;
+  --color-dark-bg: #1A1B1E;
+  --color-success: #4BB543;
+  --color-error: #E44C65;
+  --color-hover-bg: #7b67b3;
+  --color-cyan-light: #00ffbf;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-none: rgba(0,0,0,0);
+
+  --background-color: var(--color-dark-bg);
+  --text-color: var(--color-white);
+  --element-color: var(--color-violet);
+  --module-color: var(--color-dark-grey);
+  --module-color-2: var(--color-brown-grey);
+  --toast-background-default: var(--color-white);
+  --toast-color-default: var(--color-black);
+  --toast-background-success: var(--color-success);
+  --toast-background-error: var(--color-error);
+  --button-background-hover: var(--color-hover-bg);
+  
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-dark-grey);
+  --scrollbar-thumb-hover-color: var(--color-black);
+
+  --font: 'Roboto', sans-serif;
+  --font-title: 'Yellowtail', cursive;
+  --font-dyslexic: 'Lexend Zetta', sans-serif;
+  --font-super-dyslexic: 'OpenDyslexic', sans-serif;
+
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-x-x-large: 2.5rem;
+
+  --spacing-small: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-large: 1.5rem;
+
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  --transition-very-slow: 1s;
+
+}
+
+[data-theme="Light"] {
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+  --element-color: var(--color-cyan-light);
+  --module-color: var(--color-white);
+  --button-background-hover: var(--color-hover-bg);
+  --module-color-2: var(--color-brown-grey);
+
+  --scrollbar-track-color: var(--color-light-gray);
+  --scrollbar-thumb-color: var(--color-brown-grey);
+  --scrollbar-thumb-hover-color: var(--color-dark-grey);
+}
+
+[data-dyslexic="true"] {
+  --font: var(--font-dyslexic);
+}
+
+[data-dyslexic="super"] {
+  --font: var(--font-super-dyslexic);
+}
